@@ -54,9 +54,9 @@ class InteractiveRecord
   end
 
   def self.find_by(attributes)
-    key = attributes.keys[0].to_s
-    value = attributes[key].to_s
-    sql = "SELECT * FROM #{self.table_name} WHERE #{key} = '#{value}'"
+    key = attributes.keys[0]
+    value = attributes[key]
+    sql = "SELECT * FROM #{self.table_name} WHERE #{key.to_s} = '#{value.to_s}'"
     DB[:conn].execute(sql)
   end
 
