@@ -54,8 +54,8 @@ class InteractiveRecord
   end
 
   def self.find_by(attributes)
-    value = hash.values.first
-    updated_value = value.class == Fixnum ?
+    key = attributes.keys[0]
+    values = attributes[value]
     sql = "SELECT * FROM #{self.table_name} WHERE #{hash.keys.first} = '#{updated_value}'"
     DB[:conn].execute(sql)
   end
