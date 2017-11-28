@@ -29,6 +29,4 @@ class InteractiveRecord
     self.class.table_name
   end
 
-  end
-
 end
