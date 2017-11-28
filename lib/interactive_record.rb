@@ -54,7 +54,7 @@ class InteractiveRecord
   end
 
   def self.find_by(hash)
-    value = hash.value.first
+    value = hash.values.first
     sql = "SELECT * FROM #{self.table_name} WHERE #{self.values_for_insert} = '#{values}'"
     DB[:conn].execute(sql)
   end
