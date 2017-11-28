@@ -56,7 +56,7 @@ class InteractiveRecord
   def self.find_by(attributes)
     key = attributes.keys[0]
     values = attributes[value]
-    sql = "SELECT * FROM #{self.table_name} WHERE #{hash.keys.first} = '#{updated_value}'"
+    sql = "SELECT * FROM #{self.table_name} WHERE #{key} = '#{updated_value}'"
     DB[:conn].execute(sql)
   end
 
