@@ -7,5 +7,10 @@ class InteractiveRecord
   end
 
   def self.column_names
+    ATTRIBUTES = {
+      :id => "INTEGER PRIMARY KEY",
+      :name => "TEXT",
+      :grade => "TEXT"
+    }
   end
 end
