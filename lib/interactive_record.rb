@@ -12,5 +12,9 @@ class InteractiveRecord
       :name => "TEXT",
       :grade => "TEXT"
     }
+
+    ATTRIBUTES.key.each do |attribute_name|
+      attr_accessor attribute_name
+    end
   end
 end
